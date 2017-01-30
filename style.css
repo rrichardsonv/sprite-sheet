@@ -1,0 +1,8 @@
+.container{
+  width: 80%;
+}
+.rooftop{
+  background: url("rooftop_background.png");
+  background-repeat: no-repeat;
+  height: 19em;
+}

@@ -1,0 +1,90 @@
+.ryu {
+  position: absolute;
+  width: 95px;
+  height: 140px;
+  background-image: url("spritesheet.png"); }
+
+/* idle animation */
+.stance {
+  -webkit-animation: stance steps(4) 0.8s infinite;
+  -moz-animation: stance steps(4) 0.8s infinite;
+  -ms-animation: stance steps(4) 0.8s infinite;
+  animation: stance steps(4) 0.8s infinite; }
+
+@-webkit-keyframes stance {
+  0% {
+    background-position: 0px -140px; }
+  100% {
+    background-position: -380px -140px; } }
+@-moz-keyframes stance {
+  0% {
+    background-position: 0px -140px; }
+  100% {
+    background-position: -380px -140px; } }
+@-ms-keyframes stance {
+  0% {
+    background-position: 0px -140px; }
+  100% {
+    background-position: -380px -140px; } }
+@keyframes stance {
+  0% {
+    background-position: 0px -140px; }
+  100% {
+    background-position: -380px -140px; } }
+/* movement animation */
+.move {
+  -webkit-animation: move steps(5) 0.8s infinite;
+  -moz-animation: move steps(5) 0.8s infinite;
+  -ms-animation: move steps(5) 0.8s infinite;
+  animation: move steps(5) 0.8s infinite; }
+
+@-webkit-keyframes move {
+  0% {
+    background-position: 0px -10px; }
+  100% {
+    background-position: -475px -10px; } }
+@-moz-keyframes move {
+  0% {
+    background-position: 0px -10px; }
+  100% {
+    background-position: -475px -10px; } }
+@-ms-keyframes move {
+  0% {
+    background-position: 0px -10px; }
+  100% {
+    background-position: -475px -10px; } }
+@keyframes move {
+  0% {
+    background-position: 0px -10px; }
+  100% {
+    background-position: -475px -10px; } }
+/* tatsu animation */
+.tatsu {
+  -webkit-animation: tatsu steps(8) 1s infinite;
+  -moz-animation: tatsu steps(8) 1s infinite;
+  -ms-animation: tatsu steps(8) 1s infinite;
+  animation: tatsu steps(8) 1s infinite; }
+  width: 95px;
+  height: 145px;
+@-webkit-keyframes tatsu {
+  0% {
+    background-position: 0px -270px; }
+  100% {
+    background-position: -760px -270px; } }
+@-moz-keyframes tatsu {
+  0% {
+    background-position: 0px -270px; }
+  100% {
+    background-position: -760px -270px; } }
+@-ms-keyframes tatsu {
+  0% {
+    background-position: 0px -270px; }
+  100% {
+    background-position: -760px -270px; } }
+@keyframes tatsu {
+  0% {
+    background-position: 0px -270px; }
+  100% {
+    background-position: -760px -270px; } }
+
+/*# sourceMappingURL=ryu.css.map */

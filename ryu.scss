@@ -1,0 +1,45 @@
+@mixin animation($params) {
+    -webkit-animation:$params;
+    -moz-animation:$params;
+    -ms-animation:$params;
+    animation:$params;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes $name { @content }
+    @-moz-keyframes    $name { @content }
+    @-ms-keyframes     $name { @content }
+    @keyframes         $name { @content }
+}
+
+$spriteWidth:95px;
+$spriteHeight:130px;
+
+.ryu {
+  position:absolute;
+  width:$spriteWidth;
+  height:$spriteHeight;
+  background-image:url('spritesheet.png')
+}
+
+@mixin anim($animName, $steps, $animNbr, $animParams){
+  .#{$animName}{
+    @content;
+    @include animation($animName steps($steps) $animParams);
+  }
+
+  @include keyframes($name:$animName){
+    0% {background-position: 0px (-10 -($spriteHeight * ($animNbr - 1))); }
+    100% {background-position: -($spriteWidth * $steps) (-10 -($spriteHeight * ($animNbr - 1))); }
+  }
+}
+
+/* idle animation */
+@include anim($animName: stance, $steps: 4, $animNbr: 2, $animParams: .8s infinite);
+
+/* movement animation */
+@include anim($animName: move, $steps: 5, $animNbr: 1, $animParams: .8s infinite);
+
+/* tatsu animation */
+@include anim($animName: tatsu, $steps: 8, $animNbr: 3, $animParams: 2s infinite);
+
